@@ -1,0 +1,142 @@
+/* ROOT COLORS */
+:root {
+    --primary: #1a237e;
+    --accent: #ffca28;
+    --glass: rgba(255, 255, 255, 0.25);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #222;
+}
+
+/* HERO */
+.hero {
+    height: 70vh;
+    background: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1") center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 35, 126, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 48px;
+}
+
+.overlay p {
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* CONTAINER */
+.container {
+    width: 85%;
+    margin: -80px auto 40px;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+/* PROFILE */
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    margin-bottom: 15px;
+}
+
+/* QUOTE */
+.quote {
+    font-style: italic;
+    text-align: center;
+    border-left: 6px solid var(--accent);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* TIMELINE */
+.timeline ul {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline ul::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary);
+}
+
+.timeline li {
+    padding: 10px 0 10px 20px;
+    position: relative;
+}
+
+.timeline li::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+.timeline span {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+}
